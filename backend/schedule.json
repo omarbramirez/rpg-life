@@ -1,0 +1,49 @@
+{
+    "Semana001": [
+        {
+            "day": "LUNES",
+            "workingHours": 25,
+            "tasks": ["example", "example2"],
+            "hours": [0, 2]
+        },
+        {
+            "day": "MARTES",
+            "workingHours": 0,
+            "tasks": ["example"],
+            "hours": [0]
+        },
+        {
+            "day": "MIÉRCOLES",
+            "workingHours": 10,
+            "tasks": ["example", "example2", "example3"],
+            "hours": [0, 10,6]
+        }
+    ],
+    "semana002":[
+        {
+            "day": "LUNES",
+            "workingHours": 10,
+            "tasks": ["example", "example2"],
+            "hours": [0]
+        },
+        {
+            "day": "MARTES",
+            "workingHours": 0,
+            "tasks": ["example"],
+            "hours": [0]
+        },
+        {
+            "day": "MIÉRCOLES",
+            "workingHours": 10,
+            "tasks": ["example", "example2", "example3"],
+            "hours": [0]
+        },
+        {
+            "day": "JUEVES",
+            "workingHours": 10,
+            "tasks": ["example", "example2", "example3"],
+            "hours": [1]
+        }
+    ]
+}
+

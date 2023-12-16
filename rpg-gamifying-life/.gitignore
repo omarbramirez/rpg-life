@@ -1,0 +1,68 @@
+# Node.js
+node_modules/
+
+# Archivos de configuración
+*.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
+
+# Dependencias generadas
+/dist
+/build
+/.next
+/.nuxt
+/public
+
+# Logs y archivos temporales
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos generados durante el desarrollo
+*.pid
+*.seed
+*.pid.lock
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/*.iml
+/*.swp
+/*.swo
+*.DS_Store
+Thumbs.db
+
+# Carpeta de cobertura de pruebas
+/coverage/
+
+# Carpeta de dependencias
+/lib-cov/
+
+# Ficheros compilados
+*.compiled.js
+*.compiled.js.map
+
+# Archivos de compilación
+*.min.js
+*.min.js.map
+
+# Carpetas específicas para herramientas
+/.idea/
+.vscode/
+/.vscode/
+/.nyc_output/
+/.sonar/
+
+# Carpetas específicas para lenguajes
+/vendor/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Configuración del sistema operativo
+.DS_Store
+Thumbs.db
