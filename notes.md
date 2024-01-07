@@ -33,20 +33,19 @@ mongodb+srv://unfinished-one:vMxJTmcU650eayeB@cluster0.hqhel.mongodb.net/rpg-lif
 
 
 //////////////////////////////////////////////////////
-const mongoose = require('mongoose');
+La línea de código const formattedScheduleData = JSON.parse(JSON.stringify(scheduleData)); 
+//
+se utiliza para realizar una clonación profunda de la variable scheduleData. Aquí está el desglose paso a paso:
+//
+JSON.stringify(scheduleData): Convierte el objeto JavaScript scheduleData en una cadena JSON. Esto elimina cualquier referencia a objetos internos y crea una representación de cadena independiente del objeto.
+//
+JSON.parse(...): Convierte la cadena JSON resultante de nuevo en un objeto JavaScript. Este proceso de parseo crea un nuevo objeto y, debido a que la cadena JSON no tiene referencias a los objetos internos originales, se obtiene una copia completamente independiente del objeto original.
+//
+El resultado final, almacenado en formattedScheduleData, es una copia clonada de scheduleData sin compartir ninguna referencia de objetos internos con el objeto original. Esto se hace para evitar cualquier modificación accidental o interferencia entre las variables si necesitas trabajar con una copia independiente de tus datos.
+//
+Si deseas renderizar un elemento sin texto pero que ocupe espacio desde el principio, puedes establecer un espacio no visible dentro del elemento utilizando un carácter especial o un espacio en blanco. Aquí te dejo un ejemplo con un espacio en blanco:
 
-const daySchema = new mongoose.Schema({
-  day: { type: String, required: true },
-  workingHours: { type: Number, default: 0 },
-  tasks: { type: [String], default: [] },
-  hours: { type: [Number], default: [] },
-});
+const [newTask, setNewTask] = useState(<h4 className="onDeletingSuccess fade-out">{'\u00A0'}</h4>);
 
-const weekSchema = new mongoose.Schema({
-  weekNumber: { type: String, required: true, unique: true },
-  days: { type: [daySchema], default: [] },
-});
-
-const Schedule = mongoose.model('Schedule', weekSchema);
-
-module.exports = Schedule;
+En este ejemplo, {'\u00A0'} representa un espacio no visible en Unicode. Esto permitirá que el elemento tenga altura y ancho sin mostrar ningún texto visible.
+//

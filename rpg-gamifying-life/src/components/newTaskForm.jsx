@@ -1,35 +1,84 @@
-import { useState } from "react";
+import { useState} from "react";
 import axios from 'axios'
 
 
-const NewTaskForm = () => {
+// eslint-disable-next-line react/prop-types
+const NewTaskForm = ({ updateScheduleData, hours, weekIndex }) => {
+    // eslint-disable-next-line react/prop-types
+    var indexation = `${hours.length}`
+
     const [formData, setFormData] = useState({
         taskName: '',
-        hours: 0
+        hours: 1,
+        dayOfWeek: ''
     });
-    const [newTask, setNewTask] = useState('')
+    const [newTask, setNewTask] = useState('Agregar')
+    const [onSuccess, setOnSuccess] = useState('')
 
     const handleEventForm = (event)=>{
         const {name, value} = event.target
-        setFormData({
-            ...formData,
-            [name]: value
-        })
-    }
+        if(value > 0){
+            console.log(event.target)
+            setFormData({
+                ...formData,
+                hours: value
+            })
+        }
+        if(name !== 'hours'){
+            console.log(event.target)
+            setFormData({
+                ...formData,
+                [name]: value
+            })
+        }
+    } 
 
     const axiosPostData = async() =>{
+        // const currentDate = new Date().toLocaleDateString('es-ES', { weekday:"long"}).toUpperCase()
+        const task = {}
+        const hours = {}
+
+        Object.defineProperty(task, indexation, {
+            get: function () {
+                return formData.taskName;
+              },
+              set: function (newValue) {
+                formData.taskName = newValue;
+              },
+              enumerable: true,
+              configurable: true,
+            });
+
+            Object.defineProperty(hours, indexation, {
+                get: function () {
+                    return formData.hours;
+                  },
+                  set: function (newValue) {
+                    formData.hours = newValue;
+                  },
+                  enumerable: true,
+                  configurable: true,
+                });
+
         const postData = {
-            taskName: formData.taskName,
-            hours: formData.hours
+            week: weekIndex,
+            myDay: formData.dayOfWeek,
+            taskName: task,
+            myHours: hours
         }
-        await axios.post('http://localhost:4000/contact', postData)
-        .then(res=> setNewTask(<p className="success">{res.data}</p>))
+        await axios.post('http://localhost:4000/new-task', postData)
+        .then(res=> {
+            const message = res.data;
+            updateScheduleData()
+            setNewTask(message)
+            setOnSuccess('onAddingSuccess')
+            setTimeout(()=> {setNewTask('Agregar'), setOnSuccess('fade-out') }, 2000)
+        })
     }
 
     const handleSubmit = (event)=>{
         event.preventDefault()
-        // console.log(formData)
-        axiosPostData ()
+        axiosPostData();
     }
 
 
@@ -56,8 +105,29 @@ const NewTaskForm = () => {
                         required
                         />
                     </label>
-                    <button type="submit">Agregar</button>
-                    {newTask}
+                    <label htmlFor="">
+                        Día:
+                        <select
+    style={{ width: '60%', margin: '5px' }}
+    name="dayOfWeek"
+    value={formData.dayOfWeek}
+    onChange={handleEventForm}
+    required
+  >
+    <option value="" disabled>Selecciona un día</option>
+    <option value="LUNES">LUNES</option>
+    <option value="MARTES">MARTES</option>
+    <option value="MIÉRCOLES">MIÉRCOLES</option>
+    <option value="JUEVES">JUEVES</option>
+    <option value="SÁBADO">SÁBADO</option>
+    <option value="DOMINGO">DOMINGO</option>
+  </select>
+                    </label>
+                    <label htmlFor="">
+                    <button type="submit" className={onSuccess} onClick={updateScheduleData}>{newTask}</button>
+                    </label>
+                    <label htmlFor="">
+                    </label>
                 </fieldset>
             </form>
         </>

@@ -23,7 +23,7 @@ app.use('/', router)
 mongoose.connect(process.env.DB_URI)
 .then(()=>console.log('DB Connected u.u'))
 .catch(err=> console.log(err))
-
+module.exports = mongoose
 
 const port = process.env.PORT || 4000
 const server = app.listen(port, ()=>{
