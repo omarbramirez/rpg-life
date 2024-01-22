@@ -1,11 +1,12 @@
 const express = require("express");
-const router = express.Router();
+const schedule = express.Router();
 const mySchemas = require("../models/schedule");
-const gettingWeek = async (from) => {
+const gettingWeek = async (from,page,totalStudyHours, totalWorkingHours) => {
   const scheduleData = await mySchemas.Schedule.find().skip(from).limit(7)
   const totalDocuments = await mySchemas.Schedule.find().countDocuments()
   return {scheduleData, totalDocuments}
 };
+
 const settingNewDay = async(day)=>{
   let newDay = {
     day: day,
@@ -13,26 +14,25 @@ const settingNewDay = async(day)=>{
     hours: [],
     workingHours: 0
   }
-  return await mySchemas.Schedule.create(newDay)
-
+  await mySchemas.Schedule.create(newDay)
 }
 
-router.put("/update-working-hours", async(req,res) =>{
+schedule.put("/update-working-hours", async(req,res) =>{
   const {index, week, action} = req.body
   try{
-    let testing = {}
+    let currentDay = {}
     let weekIndex = (week - 1) * 7
     await gettingWeek(weekIndex).then(
       allDays => allDays.scheduleData.map((perDay, DBIndex) =>{
         if(DBIndex === index){
-          testing = perDay
+          currentDay = perDay
         }
       })
     );
 
-    const currentDayId =testing.id.valueOf()
+    const currentDayId =currentDay.id.valueOf()
 
-      const newWorkingHours = action === 'ADDING'? testing.workingHours + 1 : testing.workingHours - 1
+      const newWorkingHours = action === 'ADDING'? currentDay.workingHours + 1 : currentDay.workingHours - 1
 
       if(newWorkingHours >= 0){
         const updatingWorkingHours = await mySchemas.Schedule.findOneAndUpdate(
@@ -50,26 +50,22 @@ router.put("/update-working-hours", async(req,res) =>{
   }
 })
 
-router.delete("/delete-task", async (req, res)=>{
+schedule.delete("/delete-task", async (req, res)=>{
   const {index, task, tasksArray, hoursArray, week} = req.body;
   try{
-    console.log(index, task, tasksArray, hoursArray)
-
-    let testing = {}
+    let currentDay = {}
     let weekIndex = (week - 1) * 7
     await gettingWeek(weekIndex).then(
       allDays => allDays.scheduleData.map((perDay, DBIndex) =>{
         if(DBIndex === index){
-          testing = perDay
+          currentDay = perDay
         }
       })
     );
 
-        const currentDayId = testing.id.valueOf();
-        const currentName = testing.tasks[task];
-        const currentHour =  testing.hours[task];
-
-        console.log(currentDayId, currentName, currentHour)
+        const currentDayId = currentDay.id.valueOf();
+        const currentName = currentDay.tasks[task];
+        const currentHour =  currentDay.hours[task];
 
       const bulkOperations = [
         {
@@ -120,19 +116,21 @@ router.delete("/delete-task", async (req, res)=>{
     }
 });
 
-router.post("/new-task", async (req, res) => {
-  const { week, myDay, taskName, myHours } = req.body;
+schedule.post("/new-task", async (req, res) => {
+  const { week, myDay, taskName, myHours} = req.body;
   try {
-    let testing = {}
-    let weekIndex = (week - 1) * 7
+    let currentDay = {};
+    week !== 0 ? weekIndex = (week - 1) * 7 : weekIndex = 0
     await gettingWeek(weekIndex).then(
-      allDays => allDays.scheduleData.map((perDay) =>{
-        if(perDay.day === myDay){
-          testing = perDay
-        }
+      (allDays) => {
+        allDays.scheduleData.map((perDay) =>{
+          if(perDay.day === myDay){
+            currentDay = perDay
+          }
       })
-    );
-        const currentDayId =testing.id.valueOf()
+     });
+        const currentDayId =currentDay.id.valueOf()
+        
         const addingNewTaskToTheList = await mySchemas.Schedule.findOneAndUpdate(
           {_id: currentDayId}
           ,{$push:{
@@ -140,29 +138,28 @@ router.post("/new-task", async (req, res) => {
             hours: myHours,
           }}
           );
-          await addingNewTaskToTheList.save() ? res.send('Agregado') : res.send('Opps!')
-          res.end() 
+          await addingNewTaskToTheList.save() ? res.send('Agregado') : res.send('Opps!') 
       } catch (error) {
     console.error(error);
     res.status(500).send("Error interno del servidor");
   }
 });
 
-router.get("/schedule", (req, res) => {
-  const {page, action} = req.query
+schedule.get("/schedule", (req, res) => {
+  const {page, action, totalStudyHours, totalWorkingHours} = req.query
   if(action === 'CREATE_WEEK'){
     const week = ['LUNES', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES', 'SÁBADO', 'DOMINGO'];
     let counter = 0;
     while(counter < 7) {
-      settingNewDay(week[counter]) ? counter ++ : console.log(week[counter])
+      settingNewDay(week[counter]) ? counter ++ : console.log('Something went wrong :(')
     }
   }
   const from = (page-1) *7
-  gettingWeek(from)
+  gettingWeek(from, page, totalStudyHours, totalWorkingHours)
     .then((data) => {
       res.send(data)
     })
     .catch((err) => console.log(err));
 });
 
-module.exports = router;
+module.exports = schedule;

@@ -23,6 +23,29 @@ const scheduleSchema =new mongoose.Schema({
   },
 }, { versionKey: false });
 
+const totalHoursPerWeek = new mongoose.Schema(
+  {
+    week: {
+      type: Number,
+      required: true
+    },
+    studyHours: {
+      type: Number,
+      required: true
+    },
+    workingHours: {
+      type: Number,
+      required: true
+    },
+    totalxp:{
+      type: Number,
+      required: false
+    }  
+  }, { versionKey: false }
+)
+
+
 const Schedule = mongoose.model('Schedule', scheduleSchema, 'schedule');
-const mySchemas = {'Schedule':Schedule}
+const TotalHoursPerWeek = mongoose.model('TotalHoursPerWeek', totalHoursPerWeek, 'totalhours')
+const mySchemas = {'Schedule':Schedule, 'TotalHoursPerWeek':TotalHoursPerWeek}
 module.exports = mySchemas;

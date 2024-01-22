@@ -1,49 +1,51 @@
 import { useEffect, useState } from "react";
-import NewTaskForm from "./newTaskForm";
+import NewTaskForm from "./modules-schedule/newTaskForm";
 import axios from "axios";
 
 export const Schedule = () => {
 
-
-  const initialPage = localStorage.getItem('currentPage') || 1;
+  const initialPage = localStorage.getItem('currentPage') || false;
   const [currentPage, setCurrentPage] = useState(parseInt(initialPage));
 
   const [scheduleData, setScheduleData] = useState(null);
   const [taskDeleted, setTaskDeleted] = useState(null);
   const [styles, setStyles] = useState(null);
-  // const [currentPage, setCurrentPage] = useState(1);
   const [buttonValidator, setButtonValidator] = useState(true)
-  const [previousButtonValidator, setPreviousButtonValidator] = useState(true)
+  const [previousButtonValidator, setPreviousButtonValidator] = useState(false)
 
-  // Actualizar el valor de currentPage en localStorage cuando cambia
   useEffect(() => {
     localStorage.setItem('currentPage', currentPage.toString());
   }, [currentPage]);
 
   useEffect(() => {
-    axiosFetchData(currentPage, 'SHOW_WEEK');
+    axiosFetchSchedule(currentPage, 'SHOW_WEEK');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const updateScheduleData = async (action) => {
-    axiosFetchData(currentPage, action)
+  const updateScheduleData = (action) => {
+    axiosFetchSchedule(currentPage, action)
   };
 
-  const axiosFetchData = async (page, action) => {
+  const axiosFetchSchedule = async (page, action) => {
+    let lastPageAvaiable = page;
+    if(!initialPage){
+      await axios.get(`http://localhost:4000/getttingLastPageInInitialization`).then(res=>{
+        lastPageAvaiable = res.data.length;
+      })
+    }
+
+    let newPage = action === 'CREATE_WEEK' ?  lastPageAvaiable + 1 : lastPageAvaiable
     let totalHours = 0;
     let totalworkingHours = 0;
-    let newPage = action === 'CREATE_WEEK' ? page + 1 : page
-    console.log()
     if(action === 'ADDING'){ 
       newPage ++;
     }
     if(action === 'RESTING'){ 
       newPage --;
     }
-    await axios.get(`http://localhost:4000/schedule?page=${newPage}&action=${action}`).then((res) => {
+    await axios.get(`http://localhost:4000/schedule?page=${newPage}&action=${action}`).then(async(res) => {
       const {scheduleData, totalDocuments} =  res.data
       let gettingButtonActivation = totalDocuments / (newPage*7) !== 1;
-      // setCreatingNewWeekValidator(false)
         scheduleData.map(array => {
           totalHours += array.hours.reduce((total, hourObject) => {
             const hourValue = Object.values(hourObject)[0];
@@ -52,13 +54,27 @@ export const Schedule = () => {
           totalworkingHours += parseInt(array.workingHours)
         })
         const data = { dayData: scheduleData, totalHours: totalHours, totalworkingHours: totalworkingHours }
+        if(scheduleData.length === 7){
         setScheduleData(data)
         setCurrentPage(newPage)
         setButtonValidator(gettingButtonActivation)
-    })
-      .catch((err) => console.log(err));
+        if(action === 'TEST_WEEK'){
+          await axios.post(`http://localhost:4000/createNewWeekInfo`, {page:newPage}).then(res=>{
+            console.log(res.data)
+          })
+        }
+        if(action === 'UPDATE_WEEK' && !buttonValidator){
+          const weekData ={
+            page: newPage,
+            totalStudyHours:totalHours,
+            totalWorkingHours:totalworkingHours 
+          }
+          await axios.put(`http://localhost:4000/updatingWeekInfo`, weekData);
+        }
+      }
+      }).catch((err) => console.log(err));
   };
-
+  
   const updatingWorkingHours = async (index, action) => {
     const taskData = {
       index: index,
@@ -66,7 +82,7 @@ export const Schedule = () => {
       week: currentPage
     }
     await axios.put('http://localhost:4000/update-working-hours', taskData).then(() => {
-      updateScheduleData('SHOW_WEEK')
+      updateScheduleData('UPDATE_WEEK')
     })
   }
 
@@ -104,24 +120,22 @@ export const Schedule = () => {
     await axios.delete('http://localhost:4000/delete-task', { data: taskData })
       .then(res => {
         const message = res.data
-        updateScheduleData('SHOW_WEEK')
+        updateScheduleData('UPDATE_WEEK')
         setTaskDeleted(message)
         setStyles('onDeletingSuccess')
         setTimeout(() => { setStyles('onDeletingSuccess fade-out-delete') }, 2000)
       }).catch(err => console.log(err))
   }
 
-
   return (
     <>
-      <h1>BOSQUE INVERNAL DEL DESASOSIEGO</h1>
+      <h2 style={{textAlign: 'center'}}>TAIGA DEL QUERER</h2>
       {scheduleData ? (
         <>
           <div>
-            <NewTaskForm updateScheduleData={updateScheduleData} hours={scheduleData.dayData[scheduleData.dayData.length - 1].hours} weekIndex={currentPage} />
+            <NewTaskForm updateScheduleData={updateScheduleData} hours={scheduleData.dayData[scheduleData.dayData.length - 1].hours} weekIndex={currentPage} buttonValidator={buttonValidator}/>
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
               <button onClick={() => {
-                console.log(previousButtonValidator, currentPage)
                 if(!previousButtonValidator){
                   updateScheduleData('RESTING')}
                   setPreviousButtonValidator(currentPage <= 2)
@@ -129,7 +143,7 @@ export const Schedule = () => {
                 disabled = {previousButtonValidator}
                 >Anterior</button>
               <button onClick={() => {
-                updateScheduleData('CREATE_WEEK')
+                updateScheduleData('TEST_WEEK')
               }} 
               disabled= {buttonValidator}
               >Guardar</button>
@@ -165,7 +179,7 @@ export const Schedule = () => {
                         {array.tasks.map((task, i) => (
                           <li key={`task-${i}`}>{Object.values(task)}
                             <span>
-                              <button className="listButton" onClick={() => removeTask(index, i)}>Remove</button>
+                              <button className="listButton" onClick={() => removeTask(index, i)} hidden={buttonValidator}>Remove</button>
                             </span>
                           </li>
                         ))}
@@ -183,8 +197,8 @@ export const Schedule = () => {
                         {array.workingHours}
                       </span>
                       <span style={{ display: 'block' }}>
-                        <button onClick={() => updatingWorkingHours(index, 'RESTING')}>-</button>
-                        <button onClick={() => updatingWorkingHours(index, 'ADDING')}>+</button>
+                        <button onClick={() => updatingWorkingHours(index, 'RESTING')} hidden={buttonValidator}>-</button>
+                        <button onClick={() => updatingWorkingHours(index, 'ADDING')} hidden={buttonValidator}>+</button>
                       </span>
                     </td>
                   </tr>
@@ -201,7 +215,7 @@ export const Schedule = () => {
           </div>
         </>
       ) : (
-        <p>Loading schedule data...</p>
+        <p>Cargando semanas...</p>
       )}
     </>
   );

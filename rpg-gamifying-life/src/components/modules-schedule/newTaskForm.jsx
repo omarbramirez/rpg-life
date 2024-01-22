@@ -3,29 +3,28 @@ import axios from 'axios'
 
 
 // eslint-disable-next-line react/prop-types
-const NewTaskForm = ({ updateScheduleData, hours, weekIndex }) => {
+const NewTaskForm = ({ updateScheduleData, hours, weekIndex,buttonValidator }) => {
     // eslint-disable-next-line react/prop-types
     var indexation = `${hours.length}`
-
-    const [formData, setFormData] = useState({
+    const initialFormState = {
         taskName: '',
         hours: 1,
         dayOfWeek: ''
-    });
+    }
+    
+    const [formData, setFormData] = useState(initialFormState);
     const [newTask, setNewTask] = useState('Agregar')
     const [onSuccess, setOnSuccess] = useState('')
 
     const handleEventForm = (event)=>{
         const {name, value} = event.target
-        if(value > 0){
-            console.log(event.target)
+        if(value !== 0 && value > 0){
             setFormData({
                 ...formData,
                 hours: value
             })
         }
         if(name !== 'hours'){
-            console.log(event.target)
             setFormData({
                 ...formData,
                 [name]: value
@@ -69,9 +68,10 @@ const NewTaskForm = ({ updateScheduleData, hours, weekIndex }) => {
         await axios.post('http://localhost:4000/new-task', postData)
         .then(res=> {
             const message = res.data;
-            updateScheduleData()
+            updateScheduleData('UPDATE_WEEK')
             setNewTask(message)
             setOnSuccess('onAddingSuccess')
+            setFormData(initialFormState)
             setTimeout(()=> {setNewTask('Agregar'), setOnSuccess('fade-out') }, 2000)
         })
     }
@@ -87,22 +87,23 @@ const NewTaskForm = ({ updateScheduleData, hours, weekIndex }) => {
             <form onSubmit={handleSubmit}>
                 <fieldset style={{display: 'flex', flexDirection: 'row', 
                 alignItems: 'center', justifyContent: 'center'}}>
-                    <label htmlFor="">
-                        Nueva tarea:  
-                        <input style={{width: '60%', margin: '5px'}} type="text"
+                    <label htmlFor="">  
+                        <input style={{margin: '5px'}} type="text"
                         name="taskName"
                         value={formData.taskName}
                         onChange={handleEventForm}
                         required
+                        placeholder="Actividad realizada"
                         />
                     </label>
                     <label htmlFor="">
-                        Horas:
-                        <input style={{width: '30px', margin: '5px'}} type="number"
+                        Horas:    
+                        <input style={{margin: '5px', width: '30px'}} type="number"
                         name="hours"
                         value={formData.hours}
                         onChange={handleEventForm}
                         required
+                        placeholder="Horas"
                         />
                     </label>
                     <label htmlFor="">
@@ -114,19 +115,19 @@ const NewTaskForm = ({ updateScheduleData, hours, weekIndex }) => {
     onChange={handleEventForm}
     required
   >
+    
     <option value="" disabled>Selecciona un día</option>
     <option value="LUNES">LUNES</option>
     <option value="MARTES">MARTES</option>
     <option value="MIÉRCOLES">MIÉRCOLES</option>
     <option value="JUEVES">JUEVES</option>
+    <option value="VIERNES">VIERNES</option>
     <option value="SÁBADO">SÁBADO</option>
     <option value="DOMINGO">DOMINGO</option>
   </select>
                     </label>
                     <label htmlFor="">
-                    <button type="submit" className={onSuccess} onClick={updateScheduleData}>{newTask}</button>
-                    </label>
-                    <label htmlFor="">
+                    <button type="submit" className={onSuccess}  disabled={buttonValidator}>{newTask}</button>
                     </label>
                 </fieldset>
             </form>

@@ -1,412 +1,166 @@
 [{
   "_id": {
-    "$oid": "65937cc45182403475c5cd22"
+    "$oid": "659a45940be2c3ed34809a27"
   },
   "day": "LUNES",
-  "workingHours": 30,
-  "tasks": [
-    {
-      "0": "Grimes"
-    },
-    {
-      "1": "Caroline Polachek"
-    }
-  ],
-  "hours": [
-    {
-      "0": "28"
-    },
-    {
-      "1": "28"
-    }
-  ]
+  "workingHours": 5,
+  "tasks": [],
+  "hours": []
 },
 {
   "_id": {
-    "$oid": "65937d095182403475c5cd23"
+    "$oid": "659a45940be2c3ed34809a28"
   },
   "day": "MARTES",
-  "workingHours": 17,
-  "tasks": [
-    {
-      "0": "Danielle Haim"
-    },
-    {
-      "1": "Kiesza"
-    },
-    {
-      "4": "Regina Spektor"
-    },
-    {
-      "4": "PARAMORE"
-    }
-  ],
-  "hours": [
-    {
-      "0": 2
-    },
-    {
-      "1": "5"
-    },
-    {
-      "4": "6"
-    },
-    {
-      "4": "4"
-    }
-  ]
+  "tasks": [],
+  "hours": [],
+  "workingHours": 1
 },
 {
   "_id": {
-    "$oid": "65937da05182403475c5cd24"
+    "$oid": "659a45940be2c3ed34809a29"
   },
   "day": "MIÉRCOLES",
-  "workingHours": 10,
   "tasks": [
     {
-      "0": "Poppy"
-    },
-    {
-      "1": "Noah Cyrus"
-    },
-    {
-      "2": "Billie Eilish"
-    },
-    {
-      "3": "Alison Wonderland"
+      "0": "JAVASCRIPT AVANZADO"
     }
   ],
   "hours": [
     {
-      "0": 2
-    },
-    {
-      "1": 2
-    },
-    {
-      "2": 2
-    },
-    {
-      "3": "6"
+      "0": 1
     }
-  ]
+  ],
+  "workingHours": 7
 },
 {
   "_id": {
-    "$oid": "65937e095182403475c5cd25"
-  },
-  "day": "JUEVES",
-  "workingHours": 10,
-  "tasks": [
-    {
-      "0": "Marina Diamandis"
-    },
-    {
-      "1": "Charli XCX"
-    },
-    {
-      "2": "Noah Cyrus"
-    }
-  ],
-  "hours": [
-    {
-      "0": 2
-    },
-    {
-      "1": 2
-    },
-    {
-      "2": "2"
-    }
-  ]
-},
-{
-  "_id": {
-    "$oid": "65937ecf5182403475c5cd26"
-  },
-  "day": "VIERNES",
-  "tasks": [
-    {
-      "4": "Florrie"
-    },
-    {
-      "1": "Selah Sue"
-    },
-    {
-      "0": "Nicola Roberts"
-    }
-  ],
-  "hours": [
-    {
-      "4": 2
-    },
-    {
-      "1": 2
-    },
-    {
-      "0": 2
-    }
-  ],
-  "workingHours": 10
-},
-{
-  "_id": {
-    "$oid": "65937fd15182403475c5cd27"
-  },
-  "day": "SÁBADO",
-  "tasks": [
-    {
-      "4": "Ladaniva"
-    },
-    {
-      "1": "Francisca Valenzuela"
-    },
-    {
-      "0": "Sofia Campos"
-    },
-    {
-      "4": "Valeska Steiner"
-    },
-    {
-      "5": "Paty Cantu"
-    }
-  ],
-  "hours": [
-    {
-      "4": 2
-    },
-    {
-      "1": 2
-    },
-    {
-      "0": 2
-    },
-    {
-      "4": "6"
-    },
-    {
-      "5": "7"
-    }
-  ],
-  "workingHours": 17
-},
-{
-  "_id": {
-    "$oid": "659380aa5182403475c5cd28"
-  },
-  "day": "DOMINGO",
-  "workingHours": 4,
-  "tasks": [
-    {
-      "0": "Louisa Rose Allen"
-    },
-    {
-      "1": "Oh Land"
-    },
-    {
-      "2": "Renee Mooi"
-    },
-    {
-      "3": "Paty Cantu"
-    }
-  ],
-  "hours": [
-    {
-      "0": 2
-    },
-    {
-      "1": 2
-    },
-    {
-      "2": 2
-    },
-    {
-      "3": "8"
-    }
-  ]
-},
-{
-  "_id": {
-    "$oid": "6595947d5182403475c5cd29"
-  },
-  "day": "LUNES",
-  "workingHours": 22,
-  "tasks": [
-    {
-      "0": "Alison Wonderland"
-    },
-    {
-      "1": "Rezz"
-    }
-  ],
-  "hours": [
-    {
-      "0": "14"
-    },
-    {
-      "1": "2"
-    }
-  ]
-},
-{
-  "_id": {
-    "$oid": "6595961f5182403475c5cd2a"
-  },
-  "day": "MARTES",
-  "workingHours": 11,
-  "tasks": [
-    {
-      "0": "Nicole Dollanganger"
-    },
-    {
-      "1": "Alison Wonderland"
-    }
-  ],
-  "hours": [
-    {
-      "0": 2
-    },
-    {
-      "1": "3"
-    }
-  ]
-},
-{
-  "_id": {
-    "$oid": "659596fb5182403475c5cd2b"
-  },
-  "day": "MIÉRCOLES",
-  "workingHours": 12,
-  "tasks": [
-    {
-      "0": "Ethel Cain"
-    },
-    {
-      "1": "Tove Lo"
-    }
-  ],
-  "hours": [
-    {
-      "0": 2
-    },
-    {
-      "1": 2
-    }
-  ]
-},
-{
-  "_id": {
-    "$oid": "6595985c5182403475c5cd2c"
+    "$oid": "659a45940be2c3ed34809a2a"
   },
   "day": "JUEVES",
   "tasks": [
     {
-      "4": "Ramona Lisa"
-    },
-    {
-      "1": "ionnalee"
-    },
-    {
-      "0": "Hyd"
+      "0": "JAVASCRIPT AVANZADO"
     }
   ],
   "hours": [
     {
-      "4": 2
-    },
-    {
-      "1": 2
-    },
-    {
-      "0": 2
+      "0": 1
     }
   ],
-  "workingHours": 11
+  "workingHours": 7
 },
 {
   "_id": {
-    "$oid": "65959a3e5182403475c5cd2d"
+    "$oid": "659a45940be2c3ed34809a2b"
   },
   "day": "VIERNES",
   "tasks": [
     {
-      "4": "Birdy"
-    },
-    {
-      "1": "MØ"
-    },
-    {
-      "0": "Jaloo"
+      "0": "JAVASCRIPT AVANZADO"
     }
   ],
   "hours": [
     {
-      "4": 2
-    },
-    {
-      "1": 2
-    },
-    {
-      "0": 2
+      "0": 1
     }
   ],
-  "workingHours": 13
+  "workingHours": 3
 },
 {
   "_id": {
-    "$oid": "65959b495182403475c5cd2e"
+    "$oid": "659a45940be2c3ed34809a2c"
   },
   "day": "SÁBADO",
+  "workingHours": 5,
   "tasks": [
     {
-      "4": "BANKS"
-    },
-    {
-      "1": "Clairo"
-    },
-    {
-      "0": "Mitski"
+      "0": "JAVASCRIPT AVANZADO"
     }
   ],
   "hours": [
     {
-      "4": 2
-    },
-    {
-      "1": 2
-    },
-    {
-      "0": 2
+      "0": 1
     }
-  ],
-  "workingHours": 10
+  ]
 },
 {
   "_id": {
-    "$oid": "6599c64008c55b4f59eaaec3"
+    "$oid": "659a45940be2c3ed34809a2d"
   },
   "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 5
+},
+{
+  "_id": {
+    "$oid": "659ba12ae0d210b0131b0de4"
+  },
+  "day": "LUNES",
+  "workingHours": 7,
   "tasks": [
     {
-      "4": "Róisín Murphy"
-    },
-    {
-      "1": "Aseul"
-    },
-    {
-      "0": "Austra"
+      "0": "JAVASCRIPT AVANZADO"
     }
   ],
   "hours": [
     {
-      "4": 2
-    },
-    {
-      "1": 2
-    },
-    {
-      "0": 2
+      "0": 1
     }
-  ],
-  "workingHours": 10
+  ]
+},
+{
+  "_id": {
+    "$oid": "659ba12ae0d210b0131b0de7"
+  },
+  "day": "JUEVES",
+  "workingHours": 2,
+  "tasks": [],
+  "hours": []
+},
+{
+  "_id": {
+    "$oid": "659ba12ae0d210b0131b0de8"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 5
+},
+{
+  "_id": {
+    "$oid": "659ba12ae0d210b0131b0de5"
+  },
+  "day": "MARTES",
+  "workingHours": 9,
+  "tasks": [],
+  "hours": []
+},
+{
+  "_id": {
+    "$oid": "659ba12ae0d210b0131b0de6"
+  },
+  "day": "MIÉRCOLES",
+  "workingHours": 8,
+  "tasks": [],
+  "hours": []
+},
+{
+  "_id": {
+    "$oid": "659ba12ae0d210b0131b0de9"
+  },
+  "day": "SÁBADO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "659ba12ae0d210b0131b0dea"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
 }]
