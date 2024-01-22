@@ -3,6 +3,8 @@ import axios from 'axios'
 
 
 const ActiveQuests = ({activeQuests,updateQuestData}) =>{
+
+
     const removeQuest =async(questIndex)=>{
         const questData = {
             index: questIndex
@@ -16,21 +18,23 @@ const ActiveQuests = ({activeQuests,updateQuestData}) =>{
         }
     }
 
-const updateQuest = async(questIndex)=>{
-    const questData ={
-        index: questIndex
+    const updateQuest = async(questIndex, questXP)=>{
+        const questData ={
+            index: questIndex,
+            questXP: questXP
+        }
+        try{
+            await axios.put('http://localhost:4000/update-quest', questData).then(()=>{
+                    updateQuestData()
+            })
+        } catch(error){
+            console.error("Error fetching quest data: ", error)
+        }
     }
-    try{
-        await axios.put('http://localhost:4000/update-quest', questData).then(()=>{
-                updateQuestData()
-        })
-    } catch(error){
-        console.error("Error fetching quest data: ", error)
-    }
-}
 
     return(
         <>
+
         <table>
                                 <thead>
                                     <tr>
@@ -50,10 +54,10 @@ const updateQuest = async(questIndex)=>{
                                                                    </div>
                                                                    <div>
                                                                <span>
-                                                                <button
+                                                               <button
                                                                 className='checked'
                                                                 onClick={()=>{
-                                                                    updateQuest(data.index)
+                                                                    updateQuest(data.index, data.questXP)
                                                                 }}
                                                                 >&#10004;</button>
                                                                    <button onClick={()=>removeQuest(data.index)}>Eliminar</button>
