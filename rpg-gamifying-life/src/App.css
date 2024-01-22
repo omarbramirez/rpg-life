@@ -1,5 +1,11 @@
 #root {
-  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+#mainScreen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }

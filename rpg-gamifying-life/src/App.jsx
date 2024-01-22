@@ -6,9 +6,9 @@ import { Quests } from './components/quests';
 import {Stats} from './components/stats'
 
 function App() {
-  const [currentModuleIndex, setCurrentModuleIndex] = useState(2);
+  const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
 
-  const modules = [<Schedule key={`Schedule`}/>, <Quests key={`Quests`}/>, <Stats key={`Stats`}/>];
+  const modules = [<Schedule key={`Schedule`}/>, <Quests key={`Quests`}/>];
 
   const handleScheduleModule = () => {
     setCurrentModuleIndex(0);
@@ -16,19 +16,19 @@ function App() {
   const handleQuestModule = () => {
     setCurrentModuleIndex(1);
   };
-  const handleStatsModule =()=>{
-    setCurrentModuleIndex(2);
-  }
-
 
   return (
     <>
-      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
-        <button onClick={handleScheduleModule}>Schedule</button>
-        <button onClick={handleQuestModule}>Quests</button>
-        <button onClick={handleStatsModule}>Stats</button>
-      </div>
+      <div id='mainScreen'>
+<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+  <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', width: '400px', margin:'auto' }}>
+  <button onClick={handleScheduleModule}>Schedule</button>
+  <button onClick={handleQuestModule}>Quests</button>
+  </div>
       {modules[currentModuleIndex]}
+</div>
+        <Stats/>
+      </div>
     </>
   );
 }

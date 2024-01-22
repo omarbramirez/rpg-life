@@ -37,11 +37,11 @@ export const Quests = () => {
 
     return (
         <>
-            <h2 style={{textAlign: 'center'}}>MIS TAREAS</h2>
             {sideQuestListData ? (
                 <>
-                          <NewQuestForm updateQuestData={updateQuestData}/>
                     <div>
+                <h2 style={{textAlign: 'center'}}>MIS TAREAS</h2>
+                          <NewQuestForm updateQuestData={updateQuestData}/>
                           <ActiveQuests activeQuests={sideQuestListData.activeQuests} updateQuestData={updateQuestData}/>  
                           <PendingQuests pendingQuests={sideQuestListData.pendingQuests} updateQuestData={updateQuestData}/>
                           <CompletedQuests completedQuests={sideQuestListData.completedQuests}/>

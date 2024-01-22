@@ -25,17 +25,20 @@ export const Stats = () => {
 
 return(
     <>
-     <h2 style={{ textAlign: 'center' }}>STATS</h2>
+    <div>
+
     {statsData?(
         <>
-            <div>
+            <div  style={{width: '300px', marginLeft: '20px', position: 'sticky', top: '10px'}}>
+        {/* <h2 style={{ textAlign: 'center' }}>STATS</h2> */}
                 <Character statsData={statsData} updateStats= {updateStats} levelup={levelup}/>
             </div>
         </>
     ):(
         <p>Cargando stats...</p>
-    )
+        )
     }
+    </div>
     </>
 )
 }

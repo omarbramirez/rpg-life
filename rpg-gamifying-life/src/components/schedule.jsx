@@ -58,10 +58,8 @@ export const Schedule = () => {
         setScheduleData(data)
         setCurrentPage(newPage)
         setButtonValidator(gettingButtonActivation)
-        if(action === 'TEST_WEEK'){
-          await axios.post(`http://localhost:4000/createNewWeekInfo`, {page:newPage}).then(res=>{
-            console.log(res.data)
-          })
+        if(action === 'CREATE_WEEK'){
+          await axios.post(`http://localhost:4000/createNewWeekInfo`, {page:newPage})
         }
         if(action === 'UPDATE_WEEK' && !buttonValidator){
           const weekData ={
@@ -129,6 +127,7 @@ export const Schedule = () => {
 
   return (
     <>
+    <div>
       <h2 style={{textAlign: 'center'}}>TAIGA DEL QUERER</h2>
       {scheduleData ? (
         <>
@@ -143,7 +142,7 @@ export const Schedule = () => {
                 disabled = {previousButtonValidator}
                 >Anterior</button>
               <button onClick={() => {
-                updateScheduleData('TEST_WEEK')
+                updateScheduleData('CREATE_WEEK')
               }} 
               disabled= {buttonValidator}
               >Guardar</button>
@@ -217,6 +216,7 @@ export const Schedule = () => {
       ) : (
         <p>Cargando semanas...</p>
       )}
+          </div>
     </>
   );
 };

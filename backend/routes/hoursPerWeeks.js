@@ -41,7 +41,6 @@ hoursPerWeeks.post(`/createNewWeekInfo`, async (req, res) => {
       totalxp: 0
     };
     const newWeekInfoCreated = await mySchemas.TotalHoursPerWeek.create(newWeek);
-    res.send('FUNCIONA TOTALMENTE BIEN')
     newWeekInfoCreated.save();
   } catch (error) {
     console.error(error);
