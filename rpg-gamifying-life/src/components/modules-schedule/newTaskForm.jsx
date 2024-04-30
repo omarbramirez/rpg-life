@@ -1,5 +1,6 @@
 import { useState} from "react";
 import axios from 'axios'
+const baseURL =import.meta.env.VITE_REACT_APP_API_URL
 
 
 // eslint-disable-next-line react/prop-types
@@ -65,7 +66,7 @@ const NewTaskForm = ({ updateScheduleData, hours, weekIndex,buttonValidator }) =
             taskName: task,
             myHours: hours
         }
-        await axios.post('http://localhost:4000/new-task', postData)
+        await axios.post(`${baseURL}/new-task`, postData)
         .then(res=> {
             const message = res.data;
             updateScheduleData('UPDATE_WEEK')

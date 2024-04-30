@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import axios from 'axios'
+const baseURL =import.meta.env.VITE_REACT_APP_API_URL
 import profileImage from './profile.png';
 
 const Character =({statsData, updateStats, levelup})=>{
 
     const levelingUp = async()=>{
-        await axios.post(`http://localhost:4000/level-up`).then(()=>{
+        await axios.post(`${baseURL}/level-up`).then(()=>{
             updateStats()
         })
     }
@@ -47,6 +48,7 @@ const Character =({statsData, updateStats, levelup})=>{
                         <ul>
                             <li className="levelup-btn">
                                 <button onClick={()=>{levelingUp()}} disabled={levelup}>Level Up</button>
+                                <button onClick={()=>{updateStats()}}>Refresh</button>
                             </li>
                         </ul>
                     </td>

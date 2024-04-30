@@ -1,0 +1,1424 @@
+[{
+  "_id": {
+    "$oid": "659a45940be2c3ed34809a27"
+  },
+  "day": "LUNES",
+  "workingHours": 5,
+  "tasks": [],
+  "hours": []
+},
+{
+  "_id": {
+    "$oid": "659a45940be2c3ed34809a28"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 1
+},
+{
+  "_id": {
+    "$oid": "659a45940be2c3ed34809a29"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [
+    {
+      "0": "JAVASCRIPT AVANZADO"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 7
+},
+{
+  "_id": {
+    "$oid": "659a45940be2c3ed34809a2a"
+  },
+  "day": "JUEVES",
+  "tasks": [
+    {
+      "0": "JAVASCRIPT AVANZADO"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 7
+},
+{
+  "_id": {
+    "$oid": "659a45940be2c3ed34809a2b"
+  },
+  "day": "VIERNES",
+  "tasks": [
+    {
+      "0": "JAVASCRIPT AVANZADO"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 3
+},
+{
+  "_id": {
+    "$oid": "659a45940be2c3ed34809a2c"
+  },
+  "day": "SÁBADO",
+  "workingHours": 5,
+  "tasks": [
+    {
+      "0": "JAVASCRIPT AVANZADO"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "659a45940be2c3ed34809a2d"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 5
+},
+{
+  "_id": {
+    "$oid": "659ba12ae0d210b0131b0de4"
+  },
+  "day": "LUNES",
+  "workingHours": 7,
+  "tasks": [
+    {
+      "0": "JAVASCRIPT AVANZADO"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65adf7f3257802be8d83edf1"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65adf7f3257802be8d83edf2"
+  },
+  "day": "MIÉRCOLES",
+  "workingHours": 6,
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65adf7f3257802be8d83edf3"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 6
+},
+{
+  "_id": {
+    "$oid": "65adf7f3257802be8d83edf4"
+  },
+  "day": "VIERNES",
+  "tasks": [
+    {
+      "0": "EJERCICIO"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65adf7f3257802be8d83edf5"
+  },
+  "day": "SÁBADO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65adf7f3257802be8d83edf6"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 2
+},
+{
+  "_id": {
+    "$oid": "65b73480a4dc888c9784004f"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "65b73480a4dc888c97840050"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65b73480a4dc888c97840051"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 12
+},
+{
+  "_id": {
+    "$oid": "65b73480a4dc888c97840054"
+  },
+  "day": "SÁBADO",
+  "tasks": [
+    {
+      "0": "RUNNING 5.63KM"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65b73480a4dc888c97840055"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 7
+},
+{
+  "_id": {
+    "$oid": "65b73480a4dc888c97840052"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 12
+},
+{
+  "_id": {
+    "$oid": "65b73480a4dc888c97840053"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65c0e4eb9a1b31e6e86b9aeb"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 12
+},
+{
+  "_id": {
+    "$oid": "65c0e4ea9a1b31e6e86b9aea"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65c0e4eb9a1b31e6e86b9aec"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65c0e4eb9a1b31e6e86b9aed"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65c0e4eb9a1b31e6e86b9af0"
+  },
+  "day": "DOMINGO",
+  "tasks": [
+    {
+      "0": "PATRONES DE DISEÑO: JAVASCRIPT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65c0e4eb9a1b31e6e86b9afa"
+  },
+  "day": "SÁBADO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 3
+},
+{
+  "_id": {
+    "$oid": "65c0e4eb9a1b31e6e86b9afb"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65c98733105883ee5f7685ba"
+  },
+  "day": "LUNES",
+  "tasks": [
+    {
+      "0": "PATRONES DE DISEÑO: JAVASCRIPT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65c98733105883ee5f7685bb"
+  },
+  "day": "MARTES",
+  "workingHours": 8,
+  "tasks": [],
+  "hours": []
+},
+{
+  "_id": {
+    "$oid": "65c98733105883ee5f7685bc"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [
+    {
+      "0": "PATRONES DE DISEÑO: JAVASCRIPT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65c98733105883ee5f7685bd"
+  },
+  "day": "JUEVES",
+  "tasks": [
+    {
+      "0": "PATRONES DE DISEÑO: JAVASCRIPT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65c98733105883ee5f7685c0"
+  },
+  "day": "VIERNES",
+  "workingHours": 8,
+  "tasks": [
+    {
+      "0": "PATRONES DE DISEÑO: JAVASCRIPT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65c98733105883ee5f7685be"
+  },
+  "day": "SÁBADO",
+  "tasks": [
+    {
+      "0": "FINANCIAL EDUCATION"
+    },
+    {
+      "0": "PATRONES DE DISEÑO: JAVASCRIPT"
+    },
+    {
+      "0": "RUNNING 5.63KM"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    },
+    {
+      "0": 1
+    },
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65c98733105883ee5f7685bf"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65d2e4f8883f2dfad098d118"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65d2e53e883f2dfad098d119"
+  },
+  "day": "LUNES",
+  "workingHours": 5,
+  "tasks": [],
+  "hours": []
+},
+{
+  "_id": {
+    "$oid": "65d2e54a1898a714f1ab7e17"
+  },
+  "day": "LUNES",
+  "workingHours": 9,
+  "tasks": [
+    {
+      "0": "PATRONES DE DISEÑO: JAVASCRIPT // LÓGICA DE PROGRAMACIÓN"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65d2e54a1898a714f1ab7e18"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65d2e54a1898a714f1ab7e19"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "65d2e54a1898a714f1ab7e1a"
+  },
+  "day": "JUEVES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65d2e54a1898a714f1ab7e1b"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65d2e54a1898a714f1ab7e1c"
+  },
+  "day": "SÁBADO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 3
+},
+{
+  "_id": {
+    "$oid": "65d2e54a1898a714f1ab7e1d"
+  },
+  "day": "DOMINGO",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": "1"
+    }
+  ],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65dc11c4d8f586c3bcf67551"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "65dc11c4d8f586c3bcf67554"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65dc11c4d8f586c3bcf67555"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65dc11c4d8f586c3bcf67557"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 1
+},
+{
+  "_id": {
+    "$oid": "65dc11c4d8f586c3bcf67552"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65dc11c4d8f586c3bcf67556"
+  },
+  "day": "SÁBADO",
+  "workingHours": 3,
+  "tasks": [
+    {
+      "1": "PATRONES DE DISEÑO: JAVASCRIPT"
+    },
+    {
+      "1": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "1": "2"
+    },
+    {
+      "1": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65dc11c4d8f586c3bcf67553"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65e55fcdb5eed0eb5116be6b"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fcdb5eed0eb5116be6d"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fcdb5eed0eb5116be6f"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fcdb5eed0eb5116be71"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fcdb5eed0eb5116be73"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fcdb5eed0eb5116be75"
+  },
+  "day": "SÁBADO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fcdb5eed0eb5116be77"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fedb5eed0eb5116be82"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fedb5eed0eb5116be84"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fedb5eed0eb5116be86"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fedb5eed0eb5116be88"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e55fedb5eed0eb5116be8a"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65e56133b5eed0eb5116beb7"
+  },
+  "day": "LUNES",
+  "workingHours": 11,
+  "tasks": [],
+  "hours": []
+},
+{
+  "_id": {
+    "$oid": "65e56133b5eed0eb5116beb9"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65e56133b5eed0eb5116bebb"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "65e56133b5eed0eb5116bebd"
+  },
+  "day": "JUEVES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": "2"
+    }
+  ],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "65e56133b5eed0eb5116bebf"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "65e56133b5eed0eb5116bec1"
+  },
+  "day": "SÁBADO",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": "2"
+    }
+  ],
+  "workingHours": 5
+},
+{
+  "_id": {
+    "$oid": "65e56133b5eed0eb5116bec3"
+  },
+  "day": "DOMINGO",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": "2"
+    }
+  ],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65eea6c7859b18612c4d0fbe"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65eea6c7859b18612c4d0fc0"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "65eea6c7859b18612c4d0fc2"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "65eea6c7859b18612c4d0fc4"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 13
+},
+{
+  "_id": {
+    "$oid": "65eea6c8859b18612c4d0fc6"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "65eea6c8859b18612c4d0fc8"
+  },
+  "day": "SÁBADO",
+  "workingHours": 6,
+  "tasks": [],
+  "hours": []
+},
+{
+  "_id": {
+    "$oid": "65eea6c8859b18612c4d0fca"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "65f724d12a9e43bf847e8111"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65f724d12a9e43bf847e8113"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 12
+},
+{
+  "_id": {
+    "$oid": "65f724d12a9e43bf847e8115"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "65f724d12a9e43bf847e8117"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "65f724d12a9e43bf847e8119"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 12
+},
+{
+  "_id": {
+    "$oid": "65f724d12a9e43bf847e811b"
+  },
+  "day": "SÁBADO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "65f724d12a9e43bf847e811d"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 6
+},
+{
+  "_id": {
+    "$oid": "66010272c8229cccec275f6b"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "66010274c8229cccec275f6d"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 12
+},
+{
+  "_id": {
+    "$oid": "66010274c8229cccec275f6f"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 12
+},
+{
+  "_id": {
+    "$oid": "66010274c8229cccec275f71"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "66010274c8229cccec275f73"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "66010274c8229cccec275f75"
+  },
+  "day": "SÁBADO",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": "2"
+    }
+  ],
+  "workingHours": 1
+},
+{
+  "_id": {
+    "$oid": "66010274c8229cccec275f77"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 2
+},
+{
+  "_id": {
+    "$oid": "66098b74a437a18bfd7c1885"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "66098b74a437a18bfd7c1887"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "66098b74a437a18bfd7c1889"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": "2"
+    }
+  ],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "66098b74a437a18bfd7c188b"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 7
+},
+{
+  "_id": {
+    "$oid": "66098b74a437a18bfd7c188d"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "66098b74a437a18bfd7c188f"
+  },
+  "day": "SÁBADO",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": "2"
+    }
+  ],
+  "workingHours": 6
+},
+{
+  "_id": {
+    "$oid": "66098b74a437a18bfd7c1891"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "6614a193a437a18bfd7c1aa4"
+  },
+  "day": "LUNES",
+  "tasks": [
+    {
+      "0": "LOGICA DE PROGRAMACION"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "6614a195a437a18bfd7c1aa6"
+  },
+  "day": "MARTES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": "2"
+    }
+  ],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "6614a195a437a18bfd7c1aa8"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 12
+},
+{
+  "_id": {
+    "$oid": "6614a195a437a18bfd7c1aaa"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "6614a195a437a18bfd7c1aac"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "6614a195a437a18bfd7c1aae"
+  },
+  "day": "SÁBADO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "6614a195a437a18bfd7c1ab0"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "661cae58fc7e040057b93520"
+  },
+  "day": "LUNES",
+  "workingHours": 11,
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "661cae5bfc7e040057b93522"
+  },
+  "day": "MARTES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 7
+},
+{
+  "_id": {
+    "$oid": "661cae5bfc7e040057b93524"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 2
+},
+{
+  "_id": {
+    "$oid": "661cae5bfc7e040057b93526"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 8
+},
+{
+  "_id": {
+    "$oid": "661cae5bfc7e040057b93528"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "661cae5bfc7e040057b9352a"
+  },
+  "day": "SÁBADO",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "661cae5bfc7e040057b9352c"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "6625cfab815312d12e191bf1"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 12
+},
+{
+  "_id": {
+    "$oid": "6625cfab815312d12e191bf3"
+  },
+  "day": "MARTES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 7
+},
+{
+  "_id": {
+    "$oid": "6625cfab815312d12e191bf5"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "6625cfab815312d12e191bf7"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "6625cfab815312d12e191bf9"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 12
+},
+{
+  "_id": {
+    "$oid": "6625cfab815312d12e191bfb"
+  },
+  "day": "SÁBADO",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "6625cfab815312d12e191bfd"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "662f84ef0916e7cd926de5a5"
+  },
+  "day": "LUNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 11
+},
+{
+  "_id": {
+    "$oid": "662f84f00916e7cd926de5a7"
+  },
+  "day": "MARTES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "662f84f00916e7cd926de5a9"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "662f84f00916e7cd926de5ab"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "662f84f00916e7cd926de5ad"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "662f84f00916e7cd926de5af"
+  },
+  "day": "SÁBADO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "662f84f00916e7cd926de5b1"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+}]

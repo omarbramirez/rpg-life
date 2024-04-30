@@ -1,0 +1,320 @@
+[{
+  "_id": {
+    "$oid": "65a0bc0bba5cecc0edce3501"
+  },
+  "questName": "AULLIDO NEFROFATAL",
+  "type": "Jefe",
+  "questXP": 15000,
+  "status": "Completed",
+  "description": "Un jefe cuyo aullido anuncia la llegada de la fatalidad.",
+  "index": 1
+},
+{
+  "_id": {
+    "$oid": "65a22cde8c81472231f36c5b"
+  },
+  "questName": "CURSO DE REACT 2023",
+  "type": "Principal",
+  "questXP": 1000,
+  "description": "Curso REACT 2023 por midudev ",
+  "status": "Completed",
+  "index": 2
+},
+{
+  "_id": {
+    "$oid": "65a2eb4c8c81472231f36c5c"
+  },
+  "questName": "EMPERATRIZ INVERNAL DE LA ESCASEZ",
+  "type": "Jefe",
+  "questXP": 10000,
+  "description": "Conseguir empleo en CDMX para perpetuar estancia en la capital.",
+  "status": "Completed",
+  "index": 3
+},
+{
+  "_id": {
+    "$oid": "65a49fc18c81472231f36c5f"
+  },
+  "questName": "CAMBIAR REGIMEN FISCAL",
+  "type": "Secundaria",
+  "questXP": 300,
+  "dscription": " ",
+  "status": "Completed",
+  "index": 4
+},
+{
+  "_id": {
+    "$oid": "65a9b61d20f9eca05f8965f2"
+  },
+  "questName": "APRENDE TYPESCRIPT",
+  "type": "Secundaria",
+  "questXP": 600,
+  "status": "Active",
+  "description": "APRENDE TYPESCRIPT desde cero con este curso OFICIAL de MICROSOFT. Curso REACT 2023 por midudev",
+  "index": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a9b84620f9eca05f8965f8"
+  },
+  "questName": "GUÍA EXHAUSTIVA DE PATRONES DE DISEÑO DE JAVASCRIPT",
+  "type": "Secundaria",
+  "questXP": 2400,
+  "status": "Active",
+  "description": "Terminar lectura y apuntes de artículo en kinsta.com.",
+  "index": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a9b9c720f9eca05f8965fe"
+  },
+  "questName": "6 KM 26:00 MIN",
+  "type": "Secundaria",
+  "questXP": 3200,
+  "status": "Active",
+  "description": "Conseguir nueva marca personal en running",
+  "index": 7,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a9ba4120f9eca05f896604"
+  },
+  "questName": "TURING ALGORITHM CHALLENGE PASSED",
+  "type": "Principal",
+  "questXP": 800,
+  "status": "Active",
+  "description": "Completar mi prueba técnica en developers.turing.com.",
+  "index": 8,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ad3e1a9e75a109ba0db711"
+  },
+  "questName": "ENVIAR COTIZACION",
+  "type": "Secundaria",
+  "questXP": 400,
+  "status": "Completed",
+  "description": "Enviar cotización y plan de trabajo a clienta nutriologadalid.com",
+  "index": 9,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ae7bef1424a1cea3f3ab1f"
+  },
+  "questName": "RPG LIFE (VERSION BETA)",
+  "type": "Principal",
+  "questXP": 900,
+  "status": "Completed",
+  "description": "Terminar una versión útil aunque local de la app en React + NodeJs.",
+  "index": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b7058bdbbbc8afd71b78d3"
+  },
+  "questName": "REGRESAR AL MICTLÁN",
+  "type": "Principal",
+  "questXP": 900,
+  "status": "Completed",
+  "description": "Regresar a habitar el piso en Coyoacán, CDMX",
+  "index": 11,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b7060edbbbc8afd71b78e0"
+  },
+  "questName": "ENVIAR V3 DE CUENTAMEUNPOQUITO.COM",
+  "type": "Principal",
+  "questXP": 3200,
+  "status": "Completed",
+  "description": "Desarrollar desde cero usando REACT una tercera versióon del sitio web.",
+  "index": 12,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b70631dbbbc8afd71b78e6"
+  },
+  "questName": "HACER FACTURA DE VIAJE",
+  "type": "Secundaria",
+  "questXP": 300,
+  "status": "Completed",
+  "description": "Facturar boleto de autobus y enviarlo a contador.",
+  "index": 13,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b7097da4dc888c9783fee7"
+  },
+  "questName": "CANCELAR TARGETA INBURSA",
+  "type": "Secundaria",
+  "questXP": 500,
+  "status": "Completed",
+  "description": "Cancelar cuenta con Inbursa y romper cualquier tipo de relación con Carlos Slim tanto como sea posible.",
+  "index": 14,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b72313a4dc888c9783ffc2"
+  },
+  "questName": "PRUEBA",
+  "type": "Secundaria",
+  "questXP": 1,
+  "status": "Completed",
+  "description": "Esto es una prueba.",
+  "index": 15,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65bceba7364c1e8ed0f9e509"
+  },
+  "questName": "RPG LIFE V3",
+  "type": "Principal",
+  "questXP": 2400,
+  "status": "Active",
+  "description": "Implementar useMemo() y Base de Datos en MongoDB en app actual.",
+  "index": 16,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65bda0b2364c1e8ed0f9e577"
+  },
+  "questName": "COMPRAR DISCO DURO",
+  "type": "Secundaria",
+  "questXP": 900,
+  "status": "Completed",
+  "description": "Comprar disco duro externo para hacer un respaldo de la media en la laptop.",
+  "index": 17,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65bebd868d6290ec0ec3d1a8"
+  },
+  "questName": "REPARAR ARMADURA",
+  "type": "Secundaria",
+  "questXP": 400,
+  "status": "Completed",
+  "description": "Reacondicionar plantillas ortopédicas.",
+  "index": 18,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65bf25518d6290ec0ec3d1d2"
+  },
+  "questName": "OPTIMIZAR IMÁGENES",
+  "type": "Principal",
+  "questXP": 1850,
+  "status": "Completed",
+  "description": "Optimizar las imágenes y demás elementos gráficos de cuentame-un-poquito.com; hacer investigación de páginas y recopilar estilos para replicar en web.",
+  "index": 19,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65c383019a1b31e6e86b9c72"
+  },
+  "questName": "RENOVAR EFIRMA",
+  "type": "Secundaria",
+  "questXP": 1250,
+  "status": "Completed",
+  "description": "Renovar efirma para poder realizar trámites en línea y así cumplir también con la quest de CAMBIAR RÉGIMEN FISCAL.",
+  "index": 20,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65c38fd89a1b31e6e86b9c78"
+  },
+  "questName": "NUEVOS HORIZONTES",
+  "type": "Principal",
+  "questXP": 2900,
+  "status": "Completed",
+  "description": "Aplicar a 15 trabajos como programador.",
+  "index": 21,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65c9134b105883ee5f768594"
+  },
+  "questName": "COMPRAR ESPADA LUZ DE LUNA",
+  "type": "Principal",
+  "questXP": 44000,
+  "status": "Active",
+  "description": "Comprar laptop reacondicionada de soporte para trabajar en exteriores y respaldar proyectos actuales.",
+  "index": 22,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ceb91af83c22b10f4088a3"
+  },
+  "questName": "CETES DIRECTO",
+  "type": "Jefe Opcional",
+  "questXP": 21000,
+  "status": "Active",
+  "description": "Abrir una cuenta en cetes directo e ingresar los primeros 1,000 MXN.",
+  "index": 23,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f95f973f3afc60b1a00f7c"
+  },
+  "questName": "RETOMAR TERAPIA",
+  "type": "Secundaria",
+  "questXP": 1750,
+  "status": "Completed",
+  "description": "Asistir a primera sesión de terapia psicológica con la lic. Alma Villa.",
+  "index": 24,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f95fc43f3afc60b1a00f82"
+  },
+  "questName": "ASISTIR A CLÍNICA IMSS",
+  "type": "Jefe Opcional",
+  "questXP": 19000,
+  "status": "Active",
+  "description": "Asistir a chequeo de rutina en Clínica IMSS asignada.",
+  "index": 25,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6612b54fa437a18bfd7c1a8a"
+  },
+  "questName": "EL GUARDIAN DEL JUICIO SAJÓN",
+  "type": "Jefe",
+  "questXP": 110000,
+  "status": "Completed",
+  "description": "Llega a tu primer día en producción en la campaña de Verizon.",
+  "index": 26,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6612b6b6a437a18bfd7c1a92"
+  },
+  "questName": "INVITAR A SALIR A UNA MUJER",
+  "type": "Jefe",
+  "questXP": 98765,
+  "status": "Active",
+  "description": "Tener una cita con una nueva mujer en mi vida. El objetivo se cumple en el momento en el que ambos se reunan. ",
+  "index": 27,
+  "__v": 0
+}]

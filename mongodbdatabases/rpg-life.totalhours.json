@@ -1,0 +1,162 @@
+[{
+  "_id": {
+    "$oid": "659a506608c55b4f59eaaecc"
+  },
+  "week": 1,
+  "studyHours": 4,
+  "workingHours": 33,
+  "totalxp": 1110
+},
+{
+  "_id": {
+    "$oid": "659ba12ae0d210b0131b0de3"
+  },
+  "week": 2,
+  "studyHours": 2,
+  "workingHours": 40,
+  "totalxp": 1680
+},
+{
+  "_id": {
+    "$oid": "65a5414e56f2e2e90d815d9f"
+  },
+  "week": 3,
+  "studyHours": 1,
+  "workingHours": 33,
+  "totalxp": 1020
+},
+{
+  "_id": {
+    "$oid": "65adf84fa47c6bb72c3573e3"
+  },
+  "week": 4,
+  "studyHours": 2,
+  "workingHours": 26,
+  "totalxp": 560
+},
+{
+  "_id": {
+    "$oid": "65b872554999ccc38f8900e9"
+  },
+  "week": 5,
+  "studyHours": 1,
+  "workingHours": 67,
+  "totalxp": 4420
+},
+{
+  "_id": {
+    "$oid": "65c0e4ec9a1b31e6e86b9b0d"
+  },
+  "week": 6,
+  "studyHours": 1,
+  "workingHours": 49,
+  "totalxp": 2750
+},
+{
+  "_id": {
+    "$oid": "65c9ad8e5b01e684594698b2"
+  },
+  "week": 7,
+  "studyHours": 7,
+  "workingHours": 42,
+  "totalxp": 2205
+},
+{
+  "_id": {
+    "$oid": "65d2e54a1898a714f1ab7e2a"
+  },
+  "week": 8,
+  "studyHours": 3,
+  "workingHours": 48,
+  "totalxp": 2805
+},
+{
+  "_id": {
+    "$oid": "65dc11c4d8f586c3bcf67564"
+  },
+  "week": 9,
+  "studyHours": 4,
+  "workingHours": 47,
+  "totalxp": 2805
+},
+{
+  "_id": {
+    "$oid": "65e56133b5eed0eb5116beca"
+  },
+  "week": 10,
+  "studyHours": 6,
+  "workingHours": 56,
+  "totalxp": 4030
+},
+{
+  "_id": {
+    "$oid": "65eea6c8859b18612c4d0fd1"
+  },
+  "week": 11,
+  "studyHours": 0,
+  "workingHours": 58,
+  "totalxp": 3190
+},
+{
+  "_id": {
+    "$oid": "65f724d22a9e43bf847e8124"
+  },
+  "week": 12,
+  "studyHours": 0,
+  "workingHours": 0,
+  "totalxp": 0
+},
+{
+  "_id": {
+    "$oid": "66010276c8229cccec275f7e"
+  },
+  "week": 13,
+  "studyHours": 2,
+  "workingHours": 54,
+  "totalxp": 3360
+},
+{
+  "_id": {
+    "$oid": "66098b74a437a18bfd7c1898"
+  },
+  "week": 14,
+  "studyHours": 4,
+  "workingHours": 52,
+  "totalxp": 3360
+},
+{
+  "_id": {
+    "$oid": "6614a197a437a18bfd7c1ab7"
+  },
+  "week": 15,
+  "studyHours": 3,
+  "workingHours": 11,
+  "totalxp": 280
+},
+{
+  "_id": {
+    "$oid": "661cae5cfc7e040057b93533"
+  },
+  "week": 16,
+  "studyHours": 4,
+  "workingHours": 57,
+  "totalxp": 6100
+},
+{
+  "_id": {
+    "$oid": "6625cfab815312d12e191c04"
+  },
+  "week": 17,
+  "studyHours": 3,
+  "workingHours": 44,
+  "totalxp": 3290
+},
+{
+  "_id": {
+    "$oid": "662f84f00916e7cd926de5b8"
+  },
+  "week": 18,
+  "studyHours": 0,
+  "workingHours": 0,
+  "totalxp": 0
+}]

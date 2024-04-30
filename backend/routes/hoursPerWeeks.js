@@ -11,8 +11,10 @@ hoursPerWeeks.get(`/getttingLastPageInInitialization`, async (req, res) => {
 })
 
 hoursPerWeeks.post(`/createNewWeekInfo`, async (req, res) => {
+  const { page } = req.body;
+  //DEPURAR DESPUES
+  console.log(page)
   try {
-    const { page } = req.body;
     // Crear la nueva semana
     let generalXP = null
     await mySchemas.TotalHoursPerWeek.find().then(weeks => {
@@ -50,7 +52,7 @@ hoursPerWeeks.post(`/createNewWeekInfo`, async (req, res) => {
 
 hoursPerWeeks.put("/updatingWeekInfo", async (req, res) => {
   const { page, totalStudyHours, totalWorkingHours } = req.body;
-  const totalXP = calculateTotalXP(totalStudyHours, totalWorkingHours);
+  const totalXP = calculateTotalXP(totalStudyHours, totalWorkingHours, 10);
   const infoPerWeek = await mySchemas.TotalHoursPerWeek.find();
   let currentWeekInfo = null;
   infoPerWeek.forEach((dataWeek, index) => {

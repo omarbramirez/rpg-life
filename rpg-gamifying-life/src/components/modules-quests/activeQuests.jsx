@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import axios from 'axios'
+const baseURL =import.meta.env.VITE_REACT_APP_API_URL
 
 
 const ActiveQuests = ({activeQuests,updateQuestData}) =>{
@@ -10,7 +11,7 @@ const ActiveQuests = ({activeQuests,updateQuestData}) =>{
             index: questIndex
         }
         try{
-            await axios.delete('http://localhost:4000/delete-quest', {data: questData}).then(()=>{
+            await axios.delete(`${baseURL}/delete-quest`, {data: questData}).then(()=>{
                 updateQuestData()
             })
         } catch(error){
@@ -24,7 +25,7 @@ const ActiveQuests = ({activeQuests,updateQuestData}) =>{
             questXP: questXP
         }
         try{
-            await axios.put('http://localhost:4000/update-quest', questData).then(()=>{
+            await axios.put(`${baseURL}/update-quest`, questData).then(()=>{
                     updateQuestData()
             })
         } catch(error){

@@ -2,6 +2,7 @@ const express = require("express");
 const stats = express.Router();
 const mySchemas = require("../models/stats");
 
+
 stats.get(`/stats`, async(req, res)=>{
     const stats = await mySchemas.UserStats.find().then(data=>{
         const{currentXP, nextLevelXP} = data[0]

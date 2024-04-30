@@ -21,15 +21,18 @@ schedule.put("/update-working-hours", async(req,res) =>{
   const {index, week, action} = req.body
   try{
     let currentDay = {}
-    let weekIndex = (week - 1) * 7
-    await gettingWeek(weekIndex).then(
-      allDays => allDays.scheduleData.map((perDay, DBIndex) =>{
-        if(DBIndex === index){
-          currentDay = perDay
-        }
-      })
-    );
+    if(!currentDay.id){
 
+      let weekIndex = (week - 1) * 7
+      await gettingWeek(weekIndex).then(
+        allDays => allDays.scheduleData.map((perDay, DBIndex) =>{
+          if(DBIndex === index){
+            currentDay = perDay
+          }
+        })
+        );
+        
+      }
     const currentDayId =currentDay.id.valueOf()
 
       const newWorkingHours = action === 'ADDING'? currentDay.workingHours + 1 : currentDay.workingHours - 1
@@ -45,7 +48,7 @@ schedule.put("/update-working-hours", async(req,res) =>{
         }
         res.end()
   }catch (error) {
-    console.error(error);
+    console.log(error);
     res.status(500).send("Error interno del servidor");
   }
 })
@@ -145,13 +148,18 @@ schedule.post("/new-task", async (req, res) => {
   }
 });
 
-schedule.get("/schedule", (req, res) => {
+schedule.get("/schedule", async (req, res) => {
   const {page, action, totalStudyHours, totalWorkingHours} = req.query
   if(action === 'CREATE_WEEK'){
     const week = ['LUNES', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES', 'SÁBADO', 'DOMINGO'];
-    let counter = 0;
-    while(counter < 7) {
-      settingNewDay(week[counter]) ? counter ++ : console.log('Something went wrong :(')
+    // let counter = 0;
+    // while(counter < 7) {
+    //   settingNewDay(week[counter]) ? counter ++ : console.log('Something went wrong :(')
+    // }
+    for (let i = 0; i < 7; i++) {
+      await settingNewDay(week[i])
+      //DEPURAR DESPUES 
+      console.log(`Día ${i} creado.`);
     }
   }
   const from = (page-1) *7

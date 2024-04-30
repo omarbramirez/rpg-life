@@ -8,8 +8,8 @@ const gettingTotalQuests = async () => {
     return total
 }
 const gettingSideQuests = async () => {
-    const activeQuests = await mySchemas.QuestList.find({ status: 'Active' }).sort({ index: -1 }).limit(5);
-    const pendingQuests = await mySchemas.QuestList.find({ status: 'Active' }).sort({ index: -1 }).skip(5).limit(5)
+    const activeQuests = await mySchemas.QuestList.find({ status: 'Active' }).sort({ index: -1 }).limit(5)
+    const pendingQuests = await mySchemas.QuestList.find({ status: 'Active' }).sort({ index: -1 }).skip(5)
     const completedQuests = await mySchemas.QuestList.find({ status: 'Completed' }).limit(5)
     return { activeQuests, pendingQuests, completedQuests }
 }

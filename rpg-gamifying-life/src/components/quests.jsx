@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+const baseURL =import.meta.env.VITE_REACT_APP_API_URL
 import axios from "axios";
 import ActiveQuests from "./modules-quests/activeQuests"
 import CompletedQuests from "./modules-quests/completedQuests"
@@ -24,9 +25,7 @@ export const Quests = () => {
     const axiosFetchQuests = async () => {
         // console.log('It\'s working');
         try {
-            // const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:4000";
-            const apiUrl = "http://localhost:4000"
-            const res = await axios.get(`${apiUrl}/questList`);
+            const res = await axios.get(`${baseURL}/questList`);
             const questList = res.data;
             setSideQuestListData(questList);
             // console.log(sideQuestListData);
@@ -40,7 +39,7 @@ export const Quests = () => {
             {sideQuestListData ? (
                 <>
                     <div>
-                <h2 style={{textAlign: 'center'}}>MIS TAREAS</h2>
+                <h2 style={{textAlign: 'center'}}>TAREAS</h2>
                           <NewQuestForm updateQuestData={updateQuestData}/>
                           <ActiveQuests activeQuests={sideQuestListData.activeQuests} updateQuestData={updateQuestData}/>  
                           <PendingQuests pendingQuests={sideQuestListData.pendingQuests} updateQuestData={updateQuestData}/>

@@ -1,12 +1,18 @@
 // import 'dotenv/config';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { Schedule } from './components/schedule';
 import { Quests } from './components/quests';
 import {Stats} from './components/stats'
 
 function App() {
-  const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
+  const initialSection = localStorage.getItem('currentModuleIndex') || 0;
+  const [currentModuleIndex, setCurrentModuleIndex] = useState(parseInt(initialSection));
+
+  useEffect(() => {
+    localStorage.setItem('currentModuleIndex', currentModuleIndex.toString());
+  }, [currentModuleIndex]);
+
 
   const modules = [<Schedule key={`Schedule`}/>, <Quests key={`Quests`}/>];
 
@@ -19,6 +25,7 @@ function App() {
 
   return (
     <>
+<h2 style={{textAlign: 'center'}}>CAPITULO IV: CUMBRES LOVELACE</h2>
       <div id='mainScreen'>
 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
   <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', width: '400px', margin:'auto' }}>

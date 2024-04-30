@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NewTaskForm from "./modules-schedule/newTaskForm";
 import axios from "axios";
+const baseURL =import.meta.env.VITE_REACT_APP_API_URL || `http://localhost:4000`
 
 export const Schedule = () => {
 
@@ -29,7 +30,7 @@ export const Schedule = () => {
   const axiosFetchSchedule = async (page, action) => {
     let lastPageAvaiable = page;
     if(!initialPage){
-      await axios.get(`http://localhost:4000/getttingLastPageInInitialization`).then(res=>{
+      await axios.get(`${baseURL}/getttingLastPageInInitialization`).then(res=>{
         lastPageAvaiable = res.data.length;
       })
     }
@@ -43,7 +44,7 @@ export const Schedule = () => {
     if(action === 'RESTING'){ 
       newPage --;
     }
-    await axios.get(`http://localhost:4000/schedule?page=${newPage}&action=${action}`).then(async(res) => {
+    await axios.get(`${baseURL}/schedule?page=${newPage}&action=${action}`).then(async(res) => {
       const {scheduleData, totalDocuments} =  res.data
       let gettingButtonActivation = totalDocuments / (newPage*7) !== 1;
         scheduleData.map(array => {
@@ -59,7 +60,7 @@ export const Schedule = () => {
         setCurrentPage(newPage)
         setButtonValidator(gettingButtonActivation)
         if(action === 'CREATE_WEEK'){
-          await axios.post(`http://localhost:4000/createNewWeekInfo`, {page:newPage})
+          await axios.post(`${baseURL}/createNewWeekInfo`, {page:newPage})
         }
         if(action === 'UPDATE_WEEK' && !buttonValidator){
           const weekData ={
@@ -67,7 +68,7 @@ export const Schedule = () => {
             totalStudyHours:totalHours,
             totalWorkingHours:totalworkingHours 
           }
-          await axios.put(`http://localhost:4000/updatingWeekInfo`, weekData);
+          await axios.put(`${baseURL}/updatingWeekInfo`, weekData);
         }
       }
       }).catch((err) => console.log(err));
@@ -79,9 +80,8 @@ export const Schedule = () => {
       action: action,
       week: currentPage
     }
-    await axios.put('http://localhost:4000/update-working-hours', taskData).then(() => {
-      updateScheduleData('UPDATE_WEEK')
-    })
+    await axios.put(`${baseURL}/update-working-hours`, taskData)
+      updateScheduleData()
   }
 
   const removeTask = async (dayIndex, taskIndex) => {
@@ -115,7 +115,7 @@ export const Schedule = () => {
       week: currentPage
 
     }
-    await axios.delete('http://localhost:4000/delete-task', { data: taskData })
+    await axios.delete( `${baseURL}/delete-task`, { data: taskData })
       .then(res => {
         const message = res.data
         updateScheduleData('UPDATE_WEEK')
@@ -128,7 +128,7 @@ export const Schedule = () => {
   return (
     <>
     <div>
-      <h2 style={{textAlign: 'center'}}>TAIGA DEL QUERER</h2>
+    <h2 style={{textAlign: 'center'}}>REGISTRO</h2>
       {scheduleData ? (
         <>
           <div>
@@ -163,7 +163,7 @@ export const Schedule = () => {
                   <th scope="col">
                     SEMANA {currentPage}
                   </th>
-                  <th scope="col">Horas de Estudio</th>
+                  <th scope="col">Puntos Especiales</th>
                   <th scope="col">Horas de Trabajo</th>
                 </tr>
               </thead>

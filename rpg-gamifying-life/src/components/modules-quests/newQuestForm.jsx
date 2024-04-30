@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from 'axios'
+const baseURL =import.meta.env.VITE_REACT_APP_API_URL
 
 // eslint-disable-next-line react/prop-types
 const NewQuestForm = ({updateQuestData}) => {
@@ -32,7 +33,7 @@ const NewQuestForm = ({updateQuestData}) => {
     }
     
     const axiosPostQuest = async() => {
-        await axios.post(`http://localhost:4000/new-quest`, formData)
+        await axios.post(`${baseURL}/new-quest`, formData)
             .then((res) => {
                 const message = res.data;
                 setFormData(initialFormState)
@@ -59,7 +60,13 @@ const NewQuestForm = ({updateQuestData}) => {
                     <label htmlFor="">
 
                         <input
-                            style={{ margin: '5px' }}
+                            style={{ margin: '5px',  
+                            maxHeight: '50px',
+                            minHeight: '50px', 
+                            wordWrap: 'break-word',
+                            wordBreak: 'break-word'                        
+                        
+                        }}
                             type="text"
                             name="questName"
                             value={formData.questName}
@@ -100,8 +107,8 @@ const NewQuestForm = ({updateQuestData}) => {
                         <textarea
                             style={{
                                 margin: '5px',
-                                maxHeight: '30px',
-                                minHeight: '30px',
+                                maxHeight: '150px',
+                                minHeight: '150px',
                                 maxWidth: '150px',
                                 minWidth: '150px',
                                 whiteSpace: 'pre-wrap',

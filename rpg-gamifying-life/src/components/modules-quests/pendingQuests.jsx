@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import axios from 'axios'
+const baseURL =import.meta.env.VITE_REACT_APP_API_URL
 
 
 const PendingQuests = ({pendingQuests,updateQuestData}) =>{
@@ -10,7 +11,7 @@ const updateQuest = async(questIndex, questXP)=>{
         questXP: questXP
     }
     try{
-        await axios.put('http://localhost:4000/update-quest', questData).then(()=>{
+        await axios.put(`${baseURL}/update-quest`, questData).then(()=>{
                 updateQuestData()
         })
     } catch(error){
