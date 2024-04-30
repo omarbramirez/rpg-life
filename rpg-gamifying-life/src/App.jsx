@@ -6,6 +6,7 @@ import { Quests } from './components/quests';
 import {Stats} from './components/stats'
 
 function App() {
+
   const initialSection = localStorage.getItem('currentModuleIndex') || 0;
   const [currentModuleIndex, setCurrentModuleIndex] = useState(parseInt(initialSection));
 
