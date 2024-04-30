@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import axios from 'axios'
 const baseURL =import.meta.env.VITE_REACT_APP_API_URL
-import profileImage from './profile.png';
+import profileImage from './profile.jpg';
 
 const Character =({statsData, updateStats, levelup})=>{
 
