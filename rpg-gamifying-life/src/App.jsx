@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-<h2 style={{textAlign: 'center'}}>CAPITULO IV: CUMBRES LOVELACE</h2>
+<h2 style={{textAlign: 'center'}}>CAPITULO V: CENOTES MARGARET HAMILTON</h2>
       <div id='mainScreen'>
 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
   <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', width: '400px', margin:'auto' }}>
