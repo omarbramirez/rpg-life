@@ -18,34 +18,34 @@ function App() {
             const {data, levelup} = res.data
             setStatsData(data)
             setLevelup(levelup)
-
         }).catch((err)=>console.error(err))
     }
-
     const updateStats = ()=>{
-        axiosFetchStats()
+      axiosFetchStats()
     }
-
-  const initialSection = localStorage.getItem('currentModuleIndex') || 0;
-  const [currentModuleIndex, setCurrentModuleIndex] = useState(parseInt(initialSection));
-
-  useEffect(() => {
-    localStorage.setItem('currentModuleIndex', currentModuleIndex.toString());
-  }, [currentModuleIndex]);
-
-
-  const modules = [<Schedule key={`Schedule`} updateStats={updateStats}/>, <Quests key={`Quests`} updateStats={updateStats}/>];
-
-  const handleScheduleModule = () => {
-    setCurrentModuleIndex(0);
-  };
-  const handleQuestModule = () => {
-    setCurrentModuleIndex(1);
-  };
-
-
-
-
+    const updateStatsDelayed = () => {
+      setTimeout(() => {
+        axiosFetchStats();
+      }, 400); // 1000 milisegundos = 1 segundo
+    };
+    
+    const initialSection = localStorage.getItem('currentModuleIndex') || 0;
+    const [currentModuleIndex, setCurrentModuleIndex] = useState(parseInt(initialSection));
+    
+    useEffect(() => {
+      localStorage.setItem('currentModuleIndex', currentModuleIndex.toString());
+    }, [currentModuleIndex]);
+    
+    
+    const modules = [<Schedule key={`Schedule`} updateStats={updateStatsDelayed}/>, <Quests key={`Quests`} updateStats={updateStats}/>];
+    
+    const handleScheduleModule = () => {
+      setCurrentModuleIndex(0);
+    };
+    const handleQuestModule = () => {
+      setCurrentModuleIndex(1);
+    };    
+    
   return (
     <>
 <h2 style={{textAlign: 'center'}}>CAPITULO V: CENOTES MARGARET HAMILTON</h2>

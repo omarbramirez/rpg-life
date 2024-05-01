@@ -18,7 +18,7 @@ export const Quests = ({updateStats}) => {
         axiosFetchQuests()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
+      
     const updateQuestData= ()=>{
         axiosFetchQuests() 
 

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import NewTaskForm from "./modules-schedule/newTaskForm";
@@ -19,6 +20,7 @@ export const Schedule = ({updateStats}) => {
     localStorage.setItem('currentPage', currentPage.toString());
   }, [currentPage]);
 
+
   useEffect(() => {
     axiosFetchSchedule(currentPage, 'SHOW_WEEK');
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -26,7 +28,6 @@ export const Schedule = ({updateStats}) => {
 
   const updateScheduleData = (action) => {
     axiosFetchSchedule(currentPage, action)
-    updateStats()
   };
 
   const axiosFetchSchedule = async (page, action) => {
@@ -61,6 +62,8 @@ export const Schedule = ({updateStats}) => {
         setScheduleData(data)
         setCurrentPage(newPage)
         setButtonValidator(gettingButtonActivation)
+        updateStats()
+
         if(action === 'CREATE_WEEK'){
           await axios.post(`${baseURL}/createNewWeekInfo`, {page:newPage})
         }
@@ -73,7 +76,9 @@ export const Schedule = ({updateStats}) => {
           await axios.put(`${baseURL}/updatingWeekInfo`, weekData);
         }
       }
+      
       }).catch((err) => console.log(err));
+      
   };
   
   const updatingWorkingHours = async (index, action) => {

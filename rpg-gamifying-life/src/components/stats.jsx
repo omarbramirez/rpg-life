@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {useEffect } from 'react';
 
 import Character from "./modules-stats/character";

@@ -48,7 +48,7 @@ const Character =({statsData, updateStats, levelup})=>{
                         <ul>
                             <li className="levelup-btn">
                                 <button onClick={()=>{levelingUp()}} disabled={levelup}>Level Up</button>
-                                <button onClick={()=>{updateStats()}}>Refresh</button>
+                                {/* <button onClick={()=>{updateStats()}}>Refresh</button> */}
                             </li>
                         </ul>
                     </td>
