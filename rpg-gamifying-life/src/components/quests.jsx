@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 const baseURL =import.meta.env.VITE_REACT_APP_API_URL
 import axios from "axios";
@@ -9,7 +10,7 @@ import NewQuestForm from "./modules-quests/newQuestForm";
 
 
 
-export const Quests = () => {
+export const Quests = ({updateStats}) => {
 
     const [sideQuestListData, setSideQuestListData] = useState(null)
 
@@ -20,6 +21,7 @@ export const Quests = () => {
 
     const updateQuestData= ()=>{
         axiosFetchQuests() 
+
     }
 
     const axiosFetchQuests = async () => {
@@ -28,6 +30,7 @@ export const Quests = () => {
             const res = await axios.get(`${baseURL}/questList`);
             const questList = res.data;
             setSideQuestListData(questList);
+            updateStats();
             // console.log(sideQuestListData);
         } catch (error) {
             console.error("Error fetching quest data: ", error);

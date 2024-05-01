@@ -1,31 +1,16 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-const baseURL =import.meta.env.VITE_REACT_APP_API_URL
+import {useEffect } from 'react';
+
 import Character from "./modules-stats/character";
 
 
 
-export const Stats = () => {
-    const [statsData, setStatsData] = useState(null)
-    const [levelup, setLevelup] = useState(true)
+// eslint-disable-next-line react/prop-types
+export const Stats = ({statsData, levelup, updateStats}) => {
     
     useEffect(() => {
-        axiosFetchStats()
+        updateStats()
     }, [])
-
-    const axiosFetchStats = async () => {
-        await axios.get(`${baseURL}/stats`).then((res) => {
-            const {data, levelup} = res.data
-            setStatsData(data)
-            setLevelup(levelup)
-
-        }).catch((err)=>console.error(err))
-    }
-
-    const updateStats = ()=>{
-        axiosFetchStats()
-    }
-
+    
 return(
     <>
     <div>

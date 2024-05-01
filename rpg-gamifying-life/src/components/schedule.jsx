@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import NewTaskForm from "./modules-schedule/newTaskForm";
 import axios from "axios";
 const baseURL =import.meta.env.VITE_REACT_APP_API_URL || `http://localhost:4000`
 
-export const Schedule = () => {
+export const Schedule = ({updateStats}) => {
 
   const initialPage = localStorage.getItem('currentPage') || false;
   const [currentPage, setCurrentPage] = useState(parseInt(initialPage));
@@ -25,6 +26,7 @@ export const Schedule = () => {
 
   const updateScheduleData = (action) => {
     axiosFetchSchedule(currentPage, action)
+    updateStats()
   };
 
   const axiosFetchSchedule = async (page, action) => {
