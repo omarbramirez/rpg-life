@@ -28,10 +28,10 @@ app.use('/', hoursPerWeeks)
 app.use('/', sidequests)
 app.use('/', stats)
 
-// mongoose.connect(process.env.DB_CLOUD_URL)
-// .then(()=>console.log('DB Connected u.u'))
-// .catch(err=> console.log(err))
-// module.exports = mongoose
+mongoose.connect(process.env.DB_CLOUD_URL)
+.then(()=>console.log('DB Connected u.u'))
+.catch(err=> console.log(err))
+module.exports = mongoose
 
 // Función para leer archivos JSON de la carpeta 'databases'
 function readJSONFiles(dir) {
