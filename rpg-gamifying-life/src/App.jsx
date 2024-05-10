@@ -28,6 +28,8 @@ function App() {
         axiosFetchStats();
       }, 400); // 1000 milisegundos = 1 segundo
     };
+
+    setInterval(axiosFetchStats(), 10000);
     
     const initialSection = localStorage.getItem('currentModuleIndex') || 0;
     const [currentModuleIndex, setCurrentModuleIndex] = useState(parseInt(initialSection));
