@@ -1364,18 +1364,26 @@
     "$oid": "662f84ef0916e7cd926de5a5"
   },
   "day": "LUNES",
+  "workingHours": 12,
   "tasks": [],
-  "hours": [],
-  "workingHours": 11
+  "hours": []
 },
 {
   "_id": {
     "$oid": "662f84f00916e7cd926de5a7"
   },
   "day": "MARTES",
-  "tasks": [],
-  "hours": [],
-  "workingHours": 0
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 7
 },
 {
   "_id": {
@@ -1384,7 +1392,7 @@
   "day": "MIÉRCOLES",
   "tasks": [],
   "hours": [],
-  "workingHours": 0
+  "workingHours": 6
 },
 {
   "_id": {
@@ -1393,7 +1401,7 @@
   "day": "JUEVES",
   "tasks": [],
   "hours": [],
-  "workingHours": 0
+  "workingHours": 9
 },
 {
   "_id": {
@@ -1402,11 +1410,106 @@
   "day": "VIERNES",
   "tasks": [],
   "hours": [],
-  "workingHours": 0
+  "workingHours": 10
 },
 {
   "_id": {
     "$oid": "662f84f00916e7cd926de5af"
+  },
+  "day": "SÁBADO",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "662f84f00916e7cd926de5b1"
+  },
+  "day": "DOMINGO",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 10
+},
+{
+  "_id": {
+    "$oid": "663a7d3351df6f2bb07e102a"
+  },
+  "day": "LUNES",
+  "tasks": [
+    {
+      "0": "THE PRAGMATIC PROGRAMMER"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 9
+},
+{
+  "_id": {
+    "$oid": "663a7d3351df6f2bb07e102c"
+  },
+  "day": "MARTES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 4
+},
+{
+  "_id": {
+    "$oid": "663a7d3451df6f2bb07e102e"
+  },
+  "day": "MIÉRCOLES",
+  "tasks": [
+    {
+      "0": "WORKOUT"
+    }
+  ],
+  "hours": [
+    {
+      "0": 1
+    }
+  ],
+  "workingHours": 5
+},
+{
+  "_id": {
+    "$oid": "663a7d3451df6f2bb07e1030"
+  },
+  "day": "JUEVES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 2
+},
+{
+  "_id": {
+    "$oid": "663a7d3451df6f2bb07e1032"
+  },
+  "day": "VIERNES",
+  "tasks": [],
+  "hours": [],
+  "workingHours": 0
+},
+{
+  "_id": {
+    "$oid": "663a7d3451df6f2bb07e1034"
   },
   "day": "SÁBADO",
   "tasks": [],
@@ -1415,7 +1518,7 @@
 },
 {
   "_id": {
-    "$oid": "662f84f00916e7cd926de5b1"
+    "$oid": "663a7d3451df6f2bb07e1036"
   },
   "day": "DOMINGO",
   "tasks": [],

@@ -156,7 +156,16 @@
     "$oid": "662f84f00916e7cd926de5b8"
   },
   "week": 18,
-  "studyHours": 0,
-  "workingHours": 0,
-  "totalxp": 0
+  "studyHours": 2,
+  "workingHours": 54,
+  "totalxp": 4760
+},
+{
+  "_id": {
+    "$oid": "663a7d3451df6f2bb07e103d"
+  },
+  "week": 19,
+  "studyHours": 3,
+  "workingHours": 13,
+  "totalxp": 400
 }]

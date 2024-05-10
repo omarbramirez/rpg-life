@@ -181,7 +181,7 @@
   "questName": "RPG LIFE V3",
   "type": "Principal",
   "questXP": 2400,
-  "status": "Active",
+  "status": "Completed",
   "description": "Implementar useMemo() y Base de Datos en MongoDB en app actual.",
   "index": 16,
   "__v": 0
@@ -313,8 +313,104 @@
   "questName": "INVITAR A SALIR A UNA MUJER",
   "type": "Jefe",
   "questXP": 98765,
-  "status": "Active",
+  "status": "Completed",
   "description": "Tener una cita con una nueva mujer en mi vida. El objetivo se cumple en el momento en el que ambos se reunan. ",
   "index": 27,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66326b7731e0ccb0053b2110"
+  },
+  "questName": "FREÁTICAS  DE SCRUM",
+  "type": "Jefe",
+  "questXP": 185000,
+  "status": "Active",
+  "description": "Conseguir dos entrevistas de trabajo para un puesto como progrador formal. El jefe se supera una vez que la entrevista se realiza independientemente de conseguir o no el puesto.",
+  "index": 28,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66326c3431e0ccb0053b2116"
+  },
+  "questName": "MANTENIMIENTO",
+  "type": "Secundaria",
+  "questXP": 20000,
+  "status": "Active",
+  "description": "Barrer. Trapear. Lavar camisas. Lavar ropa interior. Lavar toallas. Lavar calcetines.",
+  "index": 29,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6632b0b768dd623012b3e39b"
+  },
+  "questName": "TESTING",
+  "type": "Secundaria",
+  "questXP": 1,
+  "status": "Completed",
+  "description": "testing",
+  "index": 30,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6632b13368dd623012b3e3b1"
+  },
+  "questName": "TESTING",
+  "type": "Secundaria",
+  "questXP": 1,
+  "status": "Completed",
+  "description": "testing",
+  "index": 31,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6632b27e68dd623012b3e3c7"
+  },
+  "questName": "TESTING",
+  "type": "Secundaria",
+  "questXP": 1,
+  "status": "Completed",
+  "description": "testing",
+  "index": 32,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6632b3a768dd623012b3e3e9"
+  },
+  "questName": "TESTING",
+  "type": "Secundaria",
+  "questXP": 1,
+  "status": "Completed",
+  "description": "testing",
+  "index": 33,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6632b5e668dd623012b3e408"
+  },
+  "questName": "TESTING",
+  "type": "Secundaria",
+  "questXP": 1,
+  "status": "Completed",
+  "description": "",
+  "index": 34,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6632c7f3c199b7bb2494f140"
+  },
+  "questName": "TESTING",
+  "type": "Secundaria",
+  "questXP": 1,
+  "status": "Completed",
+  "description": "",
+  "index": 35,
   "__v": 0
 }]

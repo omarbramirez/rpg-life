@@ -1,10 +1,14 @@
 const express = require("express");
 const stats = express.Router();
-const mySchemas = require("../models/stats");
+// const mySchemas = require("../models/stats");
+const mongodbdatabases = require("../server");
 
 
 stats.get(`/stats`, async(req, res)=>{
-    const stats = await mySchemas.UserStats.find().then(data=>{
+    // 
+    const UserStats = mongodbdatabases.UserStats; // Obtén el modelo de estadísticas de usuario
+    const statsData = await UserStats.find()
+    .then(data=>{
         const{currentXP, nextLevelXP} = data[0]
         const result = currentXP - nextLevelXP < 0
         const myData = {
@@ -17,7 +21,9 @@ stats.get(`/stats`, async(req, res)=>{
 })
 
 stats.post(`/level-up`, async(req, res)=>{
-    const stats = await mySchemas.UserStats.find()
+    const UserStats = mongodbdatabases.UserStats; // Obtén el modelo de estadísticas de usuario
+    const statsData = await UserStats.find();
+    // const stats = await mySchemas.UserStats.find()
     const {nextLevelXP, currentXP, level} = stats[0]
     const statsId = stats[0].id.valueOf();
     const difference_ = currentXP - nextLevelXP
