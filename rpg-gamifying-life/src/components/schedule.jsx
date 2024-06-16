@@ -8,7 +8,7 @@ const baseURL =import.meta.env.VITE_REACT_APP_API_URL || `http://localhost:4000`
 export const Schedule = ({updateStats}) => {
 
   const initialPage = localStorage.getItem('currentPage') || false;
-  const [currentPage, setCurrentPage] = useState(20);
+  const [currentPage, setCurrentPage] = useState(parseInt(initialPage));
 
   const [scheduleData, setScheduleData] = useState(null);
   const [taskDeleted, setTaskDeleted] = useState(null);
