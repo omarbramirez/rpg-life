@@ -50,7 +50,7 @@ function App() {
     
   return (
     <>
-<h2 style={{textAlign: 'center'}}>CAPITULO VI: FOSA DE LOS EXILIADOS</h2>
+<h2 style={{textAlign: 'center'}}>CAPITULO VII: BRECHAS DE HEVERY</h2>
       <div id='mainScreen'>
 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
   <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', width: '400px', margin:'auto' }}>
